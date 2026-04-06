@@ -1,0 +1,22 @@
+{
+  "app_name": "MindDoc: Mental Health Support",
+  "app_id": "de.moodpath.android",
+  "platform": "Google Play Store",
+  "raw_review_count": 5000,
+  "unique_review_count": 4796,
+  "cleaned_review_count": 4288,
+  "collection_method": "google-play-scraper library (reviews_all), scraped from US, CA, GB regions",
+  "cleaning_steps": [
+    "Removed duplicate reviews by content",
+    "Removed empty entries",
+    "Converted to lowercase",
+    "Removed emojis and special unicode characters",
+    "Converted numbers to text using num2words",
+    "Removed punctuation and special characters",
+    "Removed extra whitespace",
+    "Removed English stop words (NLTK)",
+    "Lemmatized words (WordNet lemmatizer)",
+    "Removed reviews with fewer than 3 words after cleaning"
+  ],
+  "min_word_count_threshold": 3
+} 

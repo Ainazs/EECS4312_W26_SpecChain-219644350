@@ -1,22 +1,109 @@
 {  "personas": [
     {
       "id": "P1",
-      "name": "Frequent Activity Tracker",
-      "description": "A user who relies on the app to log workouts frequently and expects stable performance.",
+      "name": "Multilingual User",
+      "description": "Recent immigrant, expriancing high stress due to resetlemnet looking for mental health support in her native language.",
       "derived_from_group": "G1",
       "goals": [
-        "Track workouts consistently",
-        "Log activity quickly"      ],
+        "Use the app in her native language to better understand the content",
+        "access translated mental health content "
+             ],
       "pain_points": [
-        "App crashes during logging",
-        "Workout data sometimes disappears"      ],
+        "App is only available in english",
+        "No language change setting is available"      ],
+      "context": [
+        "Recently immigrant, trying to adjust with a new culture and langueage, needs a translated version of the app to better understand the content"      ],
+      "constraints": [
+        "All UI elements, prompts, and content must be fully translated",  
+        "Language selection must be available during onboarding and persist throughout the experience"
+         ],
+      "evidence_reviews": [
+         "rev_1", "rev_660", "rev_780", "rev_916", "rev_1109",
+        "rev_1193", "rev_1232", "rev_1983", "rev_2039", "rev_2912", "rev_3427"]
+    }
+    ,{
+      "id": "P2",
+      "name": "Budget-Conscious User",
+      "description": "A University student recently moved out of his parents house, with a part time job dealing with academic pressure.",
+      "derived_from_group": "G2",
+      "goals": [
+        "Access mental health support without having to pay",
+        "Understanding what is free and what is paid before investing time."  ],
+      "pain_points": [
+        "Useful insights and features are becomeing blocked behind a paywall",
+        "With high amount of work he has, spending time steing up an account that he later on knows he needs to pay for to accces features is frustrating"      ],
+      "context": [
+        "Download the app and answered the questions for a few days.",
+        "Using the app just to log in his mood daily with out finding out any usefull information about how to improve."      ],
+      "constraints": [
+        "Core mental health support featues must be accessable without payment",
+        "Users must know about pricings before commeting time. "       ],
+      "evidence_reviews": [
+       "rev_15", "rev_44", "rev_43", "rev_48", "rev_60",
+        "rev_90", "rev_100", "rev_512", "rev_138", "rev_176"   ]
+    } 
+    ,{
+      "id": "P3",
+      "name": "Notification-Dependent User",
+      "description": "A user who relies notifications to remeber her daily mood logs",
+      "derived_from_group": "G3",
+      "goals": [
+        "Receive notifications to log mood at an appropriate time",
+        "Maintaining a mood tracking routine with out manual effort"      ],
+      "pain_points": [
+        "Notifications appeare at odd times and are easily missed",
+        "Unreliable notification system disencourage them to form habits."      ],
+      "context": [
+        "A busy user who depends on push notifications to remember check-ins",
+        "New user attempting to establish a daily tracking routine"      ],
+      "constraints": [
+        "Users should be able to customize reminder schedules" ,
+        "Notifications must be reliable and delivered on time"       ],
+      "evidence_reviews": [
+       "rev_31", "rev_165","rev_192", "rev_237",
+        "rev_439", "rev_461","rev_354", "rev_507", "rev_512"   ]
+    } 
+  ,{
+      "id": "P4",
+      "name": "Privacy Concerned User",
+      "description": "A long term user who carefully reads privacy policies and is concerned about data security.",
+      "derived_from_group": "G4",
+      "goals": [
+        "Does thier daily jaurnals everyday sometimes adding sensitive information",
+        "Have an option to use the app online or anonymously."      ],
+      "pain_points": [
+        "App seems to collect more data than necessary",
+        "App advertises an anonymous mode but making an account is required to use the feature"      ],
       "context": [
         "Logging activities immediately after workouts",
         "Using the app during outdoor exercise"      ],
       "constraints": [
-        "Logging must be reliable",
-        "Data should not be lost"       ],
+        "A user which uninstalled the app after a year of use when figured out that the app may be sharing data with third parties"       ],
       "evidence_reviews": [
-        "rev_12",
-        "rev_45"      ]
-    }  ] }
+        "rev_13", "rev_24", "rev_62", "rev_584", "rev_634",
+        "rev_461", "rev_354", "rev_787", "rev_793", "rev_2433", "rev_2434", "rev_2437" ]
+    } 
+  ,{
+      "id": "P5",
+      "name": "Daily Reflection User",
+      "description": "An active user who uses mood tracking and journaling features as midfulness and self-reflection tools to manage mental health.",
+      "derived_from_group": "G5",
+      "goals": [
+        "Use the apps for mood tracking and self-reflection",
+        "Likes to read their journal entries regularly"      ],
+      "pain_points": [
+        "limited emotion options for mood tracking",
+        "Unsure if features behind paywall are worth the investment"      ],
+      "context": [
+        "Happy with the free version, and finds it very helpful for self reflection."      ],
+      "constraints": [
+        "The check-in questions must be varied and relevant to keep users engaged"  ,
+        "free version must provide enough value to encourage continued use and potential upgrade"   ],
+      "evidence_reviews": [
+        "rev_162", "rev_136", "rev_5", "rev_23", "rev_27",
+        "rev_52", "rev_53", "rev_71", "rev_78", "rev_79"   ]
+    } 
+  
+  ]
+  }
+

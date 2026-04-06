@@ -2,11 +2,55 @@
   "groups": [
     {
       "group_id": "G1",
-      "theme": "App crashes during activity logging, THIS IS A AN EXAMPLE, PLEASE REMOVE ",
-      "review_ids": ["rev_12", "rev_33", "rev_45", "rev_89"],
+      "theme": "Users want the app to be available in more languages, or they encountered untranslated content. ",
+      "review_ids": ["rev_1", "rev_660", "rev_780", "rev_916","rev_1109", "rev_1193","rev_1232", "rev_1983",
+        "rev_2039", "rev_2912", "rev_3427"],
       "example_reviews": [
-        "The app crashes every time I log my run.",
-        "Logging workouts causes the app to freeze."
+         "It is good app but you cannot change te language",
+        "Would be perfect if there were more language available + ability to sync our results online so we can access them from several devices",
+        "It's so good ! It definitely help to increase your mantel health ! But a little problem with this that it is not available in Hindi language !"
       ]
     }
-  ]}
+    ,{
+      "group_id": "G2",
+      "theme": "Users express frustration about the paywall blocking all the usefull features",
+      "review_ids": ["rev_15", "rev_44", "rev_43", "rev_48", "rev_60", "rev_90","rev_100","rev_512", "rev_138","rev_176"],
+      "example_reviews": [
+        "Free trial only... They ask for way too much personal information only to tell you to pay. Very deceiving..",
+        "Now all of a sudden when I get a notification that I have a new insight it's locked and I guess I'd have to pay to read it. Not very helpful in a crisis situation. Are there any truly free mental health apps that aren't trying to sell me something?",
+        "I'm sure this app is great but it's mostly locked and for paid members. I couldn't get much out of it without paying. Could potentially be used as a mood tracker but not much else."
+      ]
+    }
+  
+      ,{
+      "group_id": "G3",
+      "theme": "Users reported issues with the app's notification system.",
+      "review_ids": ["rev_31", "rev_165", "rev_192", "rev_237", "rev_439", "rev_461", "rev_354", "rev_507", "rev_512","rev_354"],
+      "example_reviews": [
+        "not getting notifications to answer the questions",
+        "Only been using a few days. So far so good. I hate the reminders come at odd times and I miss them."
+      ]
+    }
+  
+      ,{
+      "group_id": "G4",
+      "theme": "privacy and data sharing concerns, with users worring about thier data being exploited",
+      "review_ids": ["rev_13", "rev_24", "rev_62", "rev_584", "rev_634", "rev_461", "rev_354", "rev_787", "rev_793","rev_2433", "rev_2434","rev_2437"],
+      "example_reviews": [
+         "It's a really great app, unfortunately it shares device IDs with third parties (according to Play) which is not optional and does not work offline. I like the idea but tracking is an absolute no go with apps that handle data this sensitive.",
+        "Was great until I read privacy agreement. They give your data to Facebook for marketing purposes using your mobile device's ad ID. I took screenshots of my last ~2 years of data and just uninstalled the program.",
+        "Stuck in setup because it is not possible to use anonymously as advertised on the website. In step 3 I have to log in or create an account. No option to skip."
+      ]
+    }
+    ,{
+      "group_id": "G5",
+      "theme": "Users enjoying the saily mood tracking and journaling features, and finding them helpful for self-reflection and mental health management.",
+      "review_ids": ["rev_162", "rev_136", "rev_5", "rev_23", "rev_27","rev_52","rev_53","rev_71","rev_78", "rev_79"],
+      "example_reviews": [
+       "So far so good. I like that the questions are different every time. Answering the questions and adding a journal entries makes me take a pause to reflect on how I am doing in the here and now. The insights are pretty cool. I wish there were more emotion options. I am not sure yet, if it is worth it for me to pay but the free version is working.",
+        "This app is great and it's completely free! You check in with your mood and answer a handful of questions a few times a day (all private of course), you can look at any of the material, there is a course you can follow, depending on what you feel you need (like if you are exhausted, or if you want to increase strength mentally and physically, etc). Highly recommended!"
+    
+      ]
+    }
+  ]
+}
