@@ -1,13 +1,68 @@
-{  "groups": [
+{
+  "groups": [
     {
       "group_id": "H1",
-      "theme": "Workout logging failures during activity tracking",
-      "review_ids": ["rev_12", "rev_33", "rev_41", "rev_92"],
+      "theme": "Language support and multilingual accessibility",
+      "review_ids": ["rev_1989", "rev_749", "rev_1546", "rev_1207", "rev_2582",
+        "rev_1189", "rev_3833", "rev_4096", "rev_3120", "rev_2793",
+        "rev_1739", "rev_3834", "rev_2207", "rev_1593", "rev_1673"],
       "example_reviews": [
-        "The app crashes whenever I try to log a run.",
-        "Logging workouts causes the app to freeze."
+        "I tried many apps like this and moodpath is by far the best. I can show it to my therapist, who doesn't really speak English that much, and she can understand some things based on the color coding system.",
+        "Would be perfect if there were more language available + ability to sync our results online so we can access them from several devices.",
+        "It is good app but you cannot change the language."
       ],
-      "notes": "Removed one unrelated review about login problems from the original automated group."
+      "notes": "Changed the name from G1 Language Support to better show the needs of people who speak more than one language. Changed example reviews from praise to reviews that talk about language barriers."
+    },
+    {
+      "group_id": "H2",
+      "theme": "Pricing honesty and free tier limitations",
+      "review_ids": ["rev_4154", "rev_3338", "rev_259", "rev_3358", "rev_362",
+        "rev_4166", "rev_2557", "rev_2864", "rev_1696", "rev_698",
+        "rev_281", "rev_3041", "rev_1742", "rev_3164", "rev_1545"],
+      "example_reviews": [
+        "Good app but most help things i have to pay for and i dont have enough money to buy the subscription so isnt as helpful.",
+        "Theres no reason for there to be a paid component to this app? I should not have to pay money to see the stats of my mood from last month.",
+        "this app is very good. I didn't expect to get much without paying, but I'm having a good time with it and haven't spent anything yet."
+      ],
+      "notes": "Changed from Pricing to Pricing honesty and free tier limitations to better show how users are upset about unclear paywalls and limited free features." },
+    {
+      "group_id": "H3",
+      "theme": "Mental health tracking and self-reflection",
+      "review_ids": ["rev_2282", "rev_998", "rev_3867", "rev_3612", "rev_738",
+        "rev_38", "rev_3551", "rev_3989", "rev_1524", "rev_587",
+        "rev_2043", "rev_1086", "rev_3185", "rev_3747", "rev_1934"],
+      "example_reviews": [
+        "Using this app has helped me SO much!",
+        "This app is really helpful for me to not only track my mental health but is REALLY convenient and easy to use! It doesn't feel like a chore like other apps have felt like for me.",
+        "its a good app and i enjoy answering the question."
+      ],
+      "notes": "Renamed from G3 Effectiveness to Mental health tracking and self-reflection to make it more specific and focused on requirements. The original theme was too broad and included both general praise and feedback tracking. The number of people in the group stays the same."
+    },
+    {
+      "group_id": "H4",
+      "theme": "Repetitive and restrictive check-in questions",
+      "review_ids": ["rev_1343", "rev_3083", "rev_879", "rev_3618", "rev_1195",
+        "rev_3282", "rev_170", "rev_287", "rev_1068", "rev_666",
+        "rev_866", "rev_2553", "rev_799", "rev_1913", "rev_1988"],
+      "example_reviews": [
+        "Overall this app managed to conclude the depression I've been living with for 15 over years. Only down side is answering repetitive questions every few days is quite boring.",
+        "I really like the app, it's been helpful. One thing I'd like to say is that the options for the questions are a bit restrictive. There are in-betweens sometimes.",
+        "I only find it annoying that sometimes in one day asks the same questions e.g. Did you sleep badly last night."
+      ],
+      "notes": "We changed the name from G4 Questionnaire to Repetitive and Restrictive Check-In Questions to better reflect the specific problems users said they were having. The first label was too vague to lead to useful requirements. Group membership and example reviews stay the same."
+    },
+    {
+      "group_id": "H5",
+      "theme": "Privacy concerns and third-party data sharing",
+      "review_ids": ["rev_2838", "rev_2513", "rev_13", "rev_2670", "rev_459",
+        "rev_488", "rev_3786", "rev_893", "rev_1367", "rev_301",
+        "rev_429", "rev_3953", "rev_476", "rev_2361", "rev_3743"],
+      "example_reviews": [
+        "It's a really great app, unfortunately it shares device IDs with third parties (according to Play) which is not optional and does not work offline.",
+        "My one suggestion would be that a pin code is required to access the app since sensitive and private information is contained within.",
+        "I dislike this new update. Found it helpful, until you've now changed it AND taken things away."
+      ],
+      "notes": "This group of reviews was renamed from G5 Updates to Privacy Concerns and Third-Party Data Sharing because the most useful and relevant reviews were about data privacy and security, not app updates."
     }
   ]
 }
