@@ -4,14 +4,12 @@ import os
 import re
 from groq import Groq
 
-# ── Config ────────────────────────────────────────────────────────────────────
 SPEC_PATH  = "spec/spec_auto.md"
 TESTS_OUT  = "tests/tests_auto.json"
 MODEL      = "meta-llama/llama-4-scout-17b-16e-instruct"
 
 client = Groq(api_key=os.environ.get("GROQ_API_KEY"))
 
-# ── Parse requirements from spec_auto.md ──────────────────────────────────────
 with open(SPEC_PATH, "r", encoding="utf-8") as f:
     spec_content = f.read()
 
@@ -40,7 +38,6 @@ for block in raw_blocks:
 
 print(f"Parsed {len(requirements)} requirements from spec_auto.md")
 
-# ── Prompt ────────────────────────────────────────────────────────────────────
 SYSTEM_PROMPT = """You are a software testing assistant.
 Given a requirement ID, description, and acceptance criteria, generate exactly 2
 test scenarios as a JSON array with this structure:
@@ -76,7 +73,6 @@ Rules:
 - One test should be a happy path, one should be an edge case or failure case
 - Respond with only the JSON array, no explanation"""
 
-# ── Generate 2 tests per requirement ─────────────────────────────────────────
 all_tests = []
 test_counter = 1
 
@@ -114,7 +110,6 @@ Generate 2 test scenarios with test_ids T_auto_{test_counter} and T_auto_{test_c
         print(f"  WARNING: could not parse tests for {req['fr_id']}: {e}")
         print(f"  Raw: {raw[:300]}")
 
-# ── Save tests_auto.json ──────────────────────────────────────────────────────
 os.makedirs("tests", exist_ok=True)
 with open(TESTS_OUT, "w", encoding="utf-8") as f:
     json.dump({"tests": all_tests}, f, indent=2)

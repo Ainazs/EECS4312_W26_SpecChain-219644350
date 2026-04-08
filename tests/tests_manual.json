@@ -2,15 +2,239 @@
 {
   "tests": [
     {
-      "test_id": "T_auto_1",
+      "test_id": "T_manual_1",
       "requirement_id": "FR1",
-      "scenario": "Workout Logging Stability",
+      "scenario": "Language Selection During Onboarding",
       "steps": [
-        "Open the workout logging screen",
-        "Enter workout details",
-        "Submit the workout"
+        "Open the app for the first time",
+        "Locate the language selection on boarding screen",
+        "Select a non-English language (e.g., French)",
+        "Continue through the app"
       ],
-      "expected_result": "The workout is saved successfully and the application remains stable."
+      "expected_result": "All UI elements and prompts displayed after language selection are shown in the selected language (French)."
+    },
+    {
+      "test_id": "T_manual_2",
+      "requirement_id": "FR1",
+      "scenario": "Onboarding Skips Language Selection Screen",
+      "steps": [
+        "Open the app for the first time",
+        "Proceed through the onboarding screens",
+        "Observe whether a language selection screen appears"
+      ],
+      "expected_result": "Before the user reaches the home screen during onboarding, a language selection panel with at least one non-English language option must show up."
+    },
+
+    {
+      "test_id": "T_manual_3",
+      "requirement_id": "FR2",
+      "scenario": "Language Preference remains Across Sessions",
+      "steps": [
+        "Complete onboarding and select a non-English language",
+        "Navigate through the app and verify content appears in the selected language",
+        "Close the application completely",
+        "Reopen the application"
+      ],
+      "expected_result": "The app launches in the selected language without prompting the user to re-select a language. "
+    },
+    {
+      "test_id": "T_manual_4",
+      "requirement_id": "FR2",
+      "scenario": "Recommended Articles Displayed in Selected Language",
+      "steps": [
+        "Select a non-English language",
+        "Navigate to the content section"
+      ],
+      "expected_result": "All recommended articles are displayed in the selected language."
+    },
+
+    {
+      "test_id": "T_manual_5",
+      "requirement_id": "FR3",
+      "scenario": "Pricing Summary Visible Before Account Creation",
+      "steps": [
+        "Open the app for the first time",
+        "Navigate toward the account creation screen",
+        "Observe the pricing summary table."
+      ],
+      "expected_result": "A pricing summary is displayed before the account creation form, listing at least 3 free features and the cost of the premium subscription."
+    },
+    {
+      "test_id": "T_manual_6",
+      "requirement_id": "FR3",
+      "scenario": "No Pricing Information Shown Before Account Creation",
+      "steps": [
+        "Open the app for the first time",
+        "Proceed directly to the account creation screen",
+        "Check whether any pricing or feature breakdown is shown before submitting account details"
+      ],
+      "expected_result": "The system must display the pricing breakdown before the user is able to submit any account information. If no pricing is shown, the test fails."
+    },
+
+    {
+      "test_id": "T_manual_7",
+      "requirement_id": "FR4",
+      "scenario": "Free Tier User Completes Mood Entry",
+      "steps": [
+        "Create a free-tier account or use guest mode",
+        "Navigate to the mood logging section",
+        "Select an emotion and complete the mood entry",
+        "Submit the entry"
+      ],
+      "expected_result": "The mood entry is saved successfully. No paywall prompt appears during the mood logging process."
+    },
+    {
+      "test_id": "T_manual_8",
+      "requirement_id": "FR4",
+      "scenario": "Free Tier User Accesses Guided Reflection Exercise",
+      "steps": [
+        "Log in with a free-tier account",
+        "Navigate to the guided reflection or exercises section",
+        "Attempt to open and complete one guided reflection exercise"
+      ],
+      "expected_result": "At least one guided reflection exercise is fully accessible and completable without a paywall."
+    },
+
+    {
+      "test_id": "T_manual_9",
+      "requirement_id": "FR5",
+      "scenario": "Notification Delivered Within Five Minutes of Scheduled Time",
+      "steps": [
+        "Open notification settings",
+        "Set a mood check-in reminder for a specific time",
+        "Wait for the scheduled time to pass",
+        "Observe the device for a notification"
+      ],
+      "expected_result": "A notification is received no later than five minutes of the configured time."
+    },
+    {
+      "test_id": "T_manual_10",
+      "requirement_id": "FR5",
+      "scenario": "No Notification Received at Scheduled Time",
+      "steps": [
+        "Set a mood check-in reminder for a specific time",
+        "Ensure the device has notifications enabled for the app",
+        "Wait at least ten minutes past the scheduled time",
+        "Check whether a notification was received"
+      ],
+      "expected_result": "If no notification is received within five minutes of the scheduled time, the test fails."
+    },
+    {
+      "test_id": "T_manual_11",
+      "requirement_id": "FR6",
+      "scenario": "User Reschedules Reminder Without Leaving the App",
+      "steps": [
+        "Open the app and navigate to the notification settings screen",
+        "Change the existing reminder time to a new time",
+        "Save the new setting",
+        "Wait for the original time to pass and observe whether a notification fires",
+        "Wait for the new time and observe whether a notification fires"
+      ],
+      "expected_result": "If notification is pushed at the original time, the test fails. A notification must be received at the new scheduled time within five minutes of that time."
+    },
+    {
+      "test_id": "T_manual_12",
+      "requirement_id": "FR6",
+      "scenario": "User Disables Mood Check-In Reminder",
+      "steps": [
+        "Open the notification settings screen within the app",
+        "Toggle the mood check-in reminder to disabled",
+        "Save the setting",
+        "Wait for the previously scheduled reminder time to pass"
+      ],
+      "expected_result": "No push notification is received at the previously scheduled time, then test passes."
+    },
+
+    {
+      "test_id": "T_manual_13",
+      "requirement_id": "FR7",
+      "scenario": "Guest Mode User Creates a Journal Entry",
+      "steps": [
+        "Open the app and select the guest option",
+        "Navigate to the journaling section",
+        "Write and save a journal entry"
+      ],
+      "expected_result": "The journal entry is saved successfully. No prompt requesting an email address, name, or account credentials is shown during the process."
+    },
+    {
+      "test_id": "T_manual_14",
+      "requirement_id": "FR7",
+      "scenario": "Guest Mode User Logs a Mood",
+      "steps": [
+        "Open the app and select the guest or anonymous mode option",
+        "Navigate to the mood logging section",
+        "Select an emotion and submit the mood log"
+      ],
+      "expected_result": "The mood log is recorded successfully."
+    },
+    {
+      "test_id": "T_manual_15",
+      "requirement_id": "FR8",
+      "scenario": "Mood Log has At Least Ten Emotion Options",
+      "steps": [
+        "Log in or open the app in guest mode",
+        "Navigate to the mood logging screen",
+        "Observe and count the labeled emotion options presented"
+      ],
+      "expected_result": "The mood loging feature has at least ten distinct emotion icon options."
+    },
+    {
+      "test_id": "T_manual_16",
+      "requirement_id": "FR8",
+      "scenario": "Mood Options Include Both Positive and Negative Emotions",
+      "steps": [
+        "Open the mood logging screen",
+        "Review all available emotion labels",
+        "Categorize each as positive or negative"
+      ],
+      "expected_result": "The emotion list contains at least one clearly positive emotion and at least one clearly negative emotion among the ten or more options."
+    },
+
+    {
+      "test_id": "T_manual_17",
+      "requirement_id": "FR9",
+      "scenario": "Check-In Question Differs on Consecutive Days",
+      "steps": [
+        "Open the app and note the check-in question displayed on day 1",
+        "Complete the check-in",
+        "Return to the check-in screen on day 2",
+        "Note the check-in question displayed"
+      ],
+      "expected_result": "The check-in question on day 2 is different from the question shown on day 1."
+    },
+    {
+      "test_id": "T_manual_18",
+      "requirement_id": "FR9",
+      "scenario": "Check-In Question Varies Over Seven Consecutive Days",
+      "steps": [
+        "Record the check-in question shown each day for seven consecutive days",
+        "Compare each day's question against the previous day's question"
+      ],
+      "expected_result": "No two consecutive days share the same check-in question across all seven days. If any consecutive pair repeats, the test fails."
+    },
+
+    {
+      "test_id": "T_manual_19",
+      "requirement_id": "FR10",
+      "scenario": "Free Tier User Views All Past Journal Entries",
+      "steps": [
+        "Log in with a free-tier account that has at least three saved journal entries",
+        "Navigate to the journal history screen",
+        "Scroll through the list of entries"
+      ],
+      "expected_result": "All previously saved journal entries are displayed with their date stamps. Each entry is fully readable. No paywall prompt appears."
+    },
+    {
+      "test_id": "T_manual_20",
+      "requirement_id": "FR10",
+      "scenario": "Journal Entries Displayed in Chronological Order",
+      "steps": [
+        "Log in with a free-tier account ",
+        "Create multiple journal entries on different days",
+        "Open the journal history screen",
+        "Observe the order in which entries are listed"
+      ],
+      "expected_result": "Journal entries are displayed with their associated dates, sorted in chronological or reverse-chronological order. The ordering is consistent and verifiable by date."
     }
   ]
 }

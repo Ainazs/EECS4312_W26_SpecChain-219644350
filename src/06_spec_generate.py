@@ -3,20 +3,17 @@ import json
 import os
 from groq import Groq
 
-# ── Config ────────────────────────────────────────────────────────────────────
 PERSONAS_PATH = "personas/personas_auto.json"
 SPEC_OUT      = "spec/spec_auto.md"
 MODEL         = "meta-llama/llama-4-scout-17b-16e-instruct"
 
 client = Groq(api_key=os.environ.get("GROQ_API_KEY"))
 
-# ── Load personas ─────────────────────────────────────────────────────────────
 with open(PERSONAS_PATH, "r", encoding="utf-8") as f:
     personas = json.load(f)["personas"]
 
 print(f"Loaded {len(personas)} personas")
 
-# ── Prompt ────────────────────────────────────────────────────────────────────
 SYSTEM_PROMPT = """You are a requirements engineering assistant.
 Given a user persona, generate exactly 2 software requirements in this markdown format:
 
@@ -41,7 +38,6 @@ Rules:
 - Base requirements strictly on the persona provided
 - Respond with only the markdown, no explanation"""
 
-# ── Generate requirements per persona ─────────────────────────────────────────
 all_requirements = []
 fr_counter = 1
 
@@ -71,7 +67,6 @@ Generate 2 requirements starting from FR{fr_counter}."""
     print(f"  Generated 2 requirements for {persona['id']} — {persona['name']} (FR{fr_counter}, FR{fr_counter+1})")
     fr_counter += 2
 
-# ── Write spec_auto.md ────────────────────────────────────────────────────────
 os.makedirs("spec", exist_ok=True)
 with open(SPEC_OUT, "w", encoding="utf-8") as f:
     f.write("# Automated Specification\n")
