@@ -2,14 +2,239 @@
   "tests": [
     {
       "test_id": "T_auto_1",
-      "requirement_id": "FR_auto_1",
-      "scenario": "Logging a workout without crashing",
+      "requirement_id": "FR1",
+      "scenario": "User receives daily reminder and logs emotions successfully",
       "steps": [
-        "Open the workout logging screen",
-        "Enter workout details",
-        "Submit the workout"
+        "Set a daily reminder for 8:00 AM",
+        "Simulate a daily reminder notification at 8:00 AM",
+        "Verify the reminder notification contains a logging emotions option",
+        "Select the logging emotions option from the reminder",
+        "Log emotions and moods"
       ],
-      "expected_result": "The workout is saved successfully and the application remains stable."
+      "expected_result": "The user's emotions and moods are logged successfully."
+    },
+    {
+      "test_id": "T_auto_2",
+      "requirement_id": "FR1",
+      "scenario": "User receives daily reminder but cannot log emotions",
+      "steps": [
+        "Set a daily reminder for 8:00 AM",
+        "Simulate a daily reminder notification at 8:00 AM",
+        "Verify the reminder notification contains a logging emotions option",
+        "Disable internet connection to simulate a network issue",
+        "Select the logging emotions option from the reminder"
+      ],
+      "expected_result": "The system displays an error message indicating that emotions and moods cannot be logged at this time."
+    },
+    {
+      "test_id": "T_auto_3",
+      "requirement_id": "FR2",
+      "scenario": "User views weekly summary with complete emotion and mood logs",
+      "steps": [
+        "Log in to the system",
+        "Log emotions and moods for 7 consecutive days",
+        "Navigate to the weekly summary page"
+      ],
+      "expected_result": "The system displays a clear and concise overview of the user's emotional state, including identified patterns and trends for the past week."
+    },
+    {
+      "test_id": "T_auto_4",
+      "requirement_id": "FR2",
+      "scenario": "User views weekly summary with incomplete emotion and mood logs",
+      "steps": [
+        "Log in to the system",
+        "Log emotions and moods for 3 days",
+        "Navigate to the weekly summary page"
+      ],
+      "expected_result": "The system displays a message indicating that there is not enough data to generate a weekly summary, or provides an option to continue logging emotions and moods."
+    },
+    {
+      "test_id": "T_auto_5",
+      "requirement_id": "FR3",
+      "scenario": "User views premium plan details",
+      "steps": [
+        "Launch the app and navigate to the subscription plans page",
+        "Select a premium plan",
+        "Verify that a detailed list of features and their costs is displayed"
+      ],
+      "expected_result": "The user is presented with a clear breakdown of premium features and their associated costs."
+    },
+    {
+      "test_id": "T_auto_6",
+      "requirement_id": "FR3",
+      "scenario": "User views premium plan with no features",
+      "steps": [
+        "Launch the app and navigate to the subscription plans page",
+        "Select a premium plan with no features listed",
+        "Verify that a message indicating no features are available is displayed"
+      ],
+      "expected_result": "The user is informed that no features are available for the selected premium plan."
+    },
+    {
+      "test_id": "T_auto_7",
+      "requirement_id": "FR4",
+      "scenario": "New user signs up for free account and accesses core features",
+      "steps": [
+        "Download and install the app",
+        "Launch the app and select 'Sign Up'",
+        "Enter valid user details and complete the sign-up process",
+        "Verify the user is logged in and can access the dashboard"
+      ],
+      "expected_result": "The user can access basic features including mood and emotion tracking."
+    },
+    {
+      "test_id": "T_auto_8",
+      "requirement_id": "FR4",
+      "scenario": "New user tries to access premium features without upgrading",
+      "steps": [
+        "Download and install the app",
+        "Launch the app and select 'Sign Up'",
+        "Enter valid user details and complete the sign-up process",
+        "Attempt to access a premium feature"
+      ],
+      "expected_result": "The user is prompted to upgrade to a premium subscription to access the requested feature."
+    },
+    {
+      "test_id": "T_auto_9",
+      "requirement_id": "FR5",
+      "scenario": "User logs a mood successfully",
+      "steps": [
+        "Launch the application and navigate to the mood tracking feature",
+        "Select a mood from the list of customizable emotions",
+        "Choose an intensity level for the selected mood",
+        "Submit the mood log"
+      ],
+      "expected_result": "The system records and displays the user's mood log with the selected mood and intensity level."
+    },
+    {
+      "test_id": "T_auto_10",
+      "requirement_id": "FR5",
+      "scenario": "User attempts to log a mood without selecting a mood or intensity level",
+      "steps": [
+        "Launch the application and navigate to the mood tracking feature",
+        "Submit the mood log without selecting a mood or intensity level"
+      ],
+      "expected_result": "The system displays an error message prompting the user to select a mood and intensity level."
+    },
+    {
+      "test_id": "T_auto_11",
+      "requirement_id": "FR6",
+      "scenario": "Generate personalized mood analysis report with logged data",
+      "steps": [
+        "Log in as a user with existing account",
+        "Navigate to the mood logging section and log mood data for a specified period (e.g., 1 week)",
+        "Request a mood analysis report",
+        "Verify the report is generated and contains trends, patterns, and correlations in the logged mood data"
+      ],
+      "expected_result": "The system generates a personalized mood analysis report highlighting trends, patterns, and correlations in the user's logged mood data."
+    },
+    {
+      "test_id": "T_auto_12",
+      "requirement_id": "FR6",
+      "scenario": "Handle mood analysis report request with insufficient logged data",
+      "steps": [
+        "Log in as a user with existing account",
+        "Navigate to the mood logging section and log mood data for less than the specified period (e.g., 1 day)",
+        "Request a mood analysis report"
+      ],
+      "expected_result": "The system displays an error message indicating that there is insufficient logged data to generate a meaningful mood analysis report."
+    },
+    {
+      "test_id": "T_auto_13",
+      "requirement_id": "FR7",
+      "scenario": "Recover unsaved data after app crash",
+      "steps": [
+        "Launch the app and make some entries",
+        "Simulate an app crash",
+        "Reopen the app"
+      ],
+      "expected_result": "The system recovers and displays the unsaved data"
+    },
+    {
+      "test_id": "T_auto_14",
+      "requirement_id": "FR7",
+      "scenario": "No data recovery when no entries made",
+      "steps": [
+        "Launch the app without making any entries",
+        "Simulate an app crash",
+        "Reopen the app"
+      ],
+      "expected_result": "The system does not attempt to recover any data and starts with a clean slate"
+    },
+    {
+      "test_id": "T_auto_15",
+      "requirement_id": "FR8",
+      "scenario": "Valid error message display",
+      "steps": [
+        "Simulate a common technical issue (e.g., invalid login credentials)",
+        "Verify the error message is displayed",
+        "Check the error message for a specific cause of the issue",
+        "Check the error message for recommended steps to resolve the issue"
+      ],
+      "expected_result": "The error message provides a specific cause and recommended steps to resolve the issue."
+    },
+    {
+      "test_id": "T_auto_16",
+      "requirement_id": "FR8",
+      "scenario": "Error message without recommended steps",
+      "steps": [
+        "Simulate an uncommon technical issue (e.g., database connection error) without predefined recommended steps",
+        "Verify the error message is displayed",
+        "Check the error message for a generic cause of the issue",
+        "Check the error message does not provide recommended steps to resolve the issue"
+      ],
+      "expected_result": "The error message provides a generic cause but no recommended steps."
+    },
+    {
+      "test_id": "T_auto_17",
+      "requirement_id": "FR9",
+      "scenario": "User finds relevant article in top 3 search results",
+      "steps": [
+        "Log in to the app",
+        "Navigate to the knowledge base section",
+        "Enter a common question about the app's functionality in the search bar",
+        "Press the search button"
+      ],
+      "expected_result": "The search results display a relevant article that answers the question within the top 3 results."
+    },
+    {
+      "test_id": "T_auto_18",
+      "requirement_id": "FR9",
+      "scenario": "User does not find relevant article in top 3 search results",
+      "steps": [
+        "Log in to the app",
+        "Navigate to the knowledge base section",
+        "Enter a question about a functionality that does not exist in the app",
+        "Press the search button"
+      ],
+      "expected_result": "The search results do not display a relevant article within the top 3 results, and a message indicating no results found is displayed."
+    },
+    {
+      "test_id": "T_auto_19",
+      "requirement_id": "FR10",
+      "scenario": "User receives a response to their question within 24 hours",
+      "steps": [
+        "Log in to the system as a user",
+        "Navigate to the community forum",
+        "Post a question about personal growth journey",
+        "Wait for 24 hours",
+        "Verify that at least one response has been received"
+      ],
+      "expected_result": "The user receives at least one response from another user or moderator within 24 hours."
+    },
+    {
+      "test_id": "T_auto_20",
+      "requirement_id": "FR10",
+      "scenario": "User does not receive a response to their question within 24 hours",
+      "steps": [
+        "Log in to the system as a user",
+        "Navigate to the community forum",
+        "Post a question about personal growth journey",
+        "Ensure no other users or moderators are online",
+        "Wait for 24 hours",
+        "Verify that no responses have been received"
+      ],
+      "expected_result": "The system does not provide a response within 24 hours, and possibly sends a notification about the lack of response or encourages the user to check back later."
     }
   ]
 }
