@@ -3,14 +3,244 @@
     {
       "test_id": "T_hybrid_1",
       "requirement_id": "FR_hybrid_1",
-      "scenario": "Save a workout entry without crashing",
+      "scenario": "Free tier user completes a mood entry without hitting a paywall",
       "steps": [
-        "Open the workout logging feature",
-        "Enter workout information",
-        "Submit the workout"
+        "Create a new free account",
+        "Log in to the system with the free account credentials",
+        "Navigate to the mood tracking section",
+        "Complete and submit a full mood entry"
       ],
-      "expected_result": "The workout is saved successfully and the application does not crash.",
-      "notes": "Revised the expected result to match the updated hybrid requirement."
+      "expected_result": "The mood entry is saved successfully and no paywall prompt appears during the process.",
+      "notes": "The original just said 'access basic features' which is way too vague — changed it to actually check there's no paywall."
+    },
+    {
+      "test_id": "T_hybrid_2",
+      "requirement_id": "FR_hybrid_1",
+      "scenario": "Free tier user views mood history for the past 30 days without paywall",
+      "steps": [
+        "Log in with a free account that has at least one mood entry",
+        "Navigate to the mood history section",
+        "Observe whether a paywall appears"
+      ],
+      "expected_result": "The user can view their mood history for the past 30 days and no subscription prompt appears.",
+      "notes": "The auto version tested premium restriction which isn't what this requirement is about. Swapped it out for a 30-day history check."
+    },
+    {
+      "test_id": "T_hybrid_3",
+      "requirement_id": "FR_hybrid_2",
+      "scenario": "Pricing summary is shown before account creation",
+      "steps": [
+        "Open the app for the first time",
+        "Navigate toward the account creation screen",
+        "Observe whether a pricing summary is displayed before any account fields appear"
+      ],
+      "expected_result": "A pricing summary listing at least three free features and the monthly cost of the premium subscription is visible before the user submits any account information.",
+      "notes": "Auto version checked pricing inside account settings which is too late. Users need to see this before they even sign up."
+    },
+    {
+      "test_id": "T_hybrid_4",
+      "requirement_id": "FR_hybrid_2",
+      "scenario": "No pricing information shown before account creation",
+      "steps": [
+        "Open the app for the first time",
+        "Proceed directly to the account creation screen",
+        "Check whether any pricing or feature breakdown is shown before submitting account details"
+      ],
+      "expected_result": "If no pricing summary is displayed before account submission the test fails. The system must show pricing before account creation.",
+      "notes": "did not change"
+    },
+    {
+      "test_id": "T_hybrid_5",
+      "requirement_id": "FR_hybrid_3",
+      "scenario": "Mood check-in screen displays at least ten labeled emotion options",
+      "steps": [
+        "Log in to the system",
+        "Navigate to the mood check-in screen",
+        "Count the number of labeled emotion options displayed"
+      ],
+      "expected_result": "At least ten labeled emotion options are visible or accessible by scrolling, including both positive and negative emotional states.",
+      "notes": "The auto test was about logging a mood and viewing history — totally different thing. Changed it to actually count the emotion options."
+    },
+    {
+      "test_id": "T_hybrid_6",
+      "requirement_id": "FR_hybrid_3",
+      "scenario": "Emotion options include both positive and negative states",
+      "steps": [
+        "Open the mood check-in screen",
+        "Review all available emotion labels",
+        "Categorize each as positive or negative"
+      ],
+      "expected_result": "The emotion list contains at least one clearly positive emotion and at least one clearly negative emotion among the ten or more options.",
+      "notes": "did not change"
+    },
+    {
+      "test_id": "T_hybrid_7",
+      "requirement_id": "FR_hybrid_4",
+      "scenario": "Check-in question differs on consecutive days",
+      "steps": [
+        "Open the app and note the check-in question displayed on day 1",
+        "Complete the check-in",
+        "Return to the check-in screen on day 2",
+        "Note the check-in question displayed"
+      ],
+      "expected_result": "The check-in question on day 2 is different from the question shown on day 1.",
+      "notes": "Auto test was about a reflection prompt library which had nothing to do with this group. Replaced it with an actual consecutive day question check."
+    },
+    {
+      "test_id": "T_hybrid_8",
+      "requirement_id": "FR_hybrid_4",
+      "scenario": "Check-in question varies across seven consecutive days",
+      "steps": [
+        "Record the check-in question shown each day for seven consecutive days",
+        "Compare each day's question against the previous day's question"
+      ],
+      "expected_result": "No two consecutive days share the same check-in question across all seven days.",
+      "notes": "did not change"
+    },
+    {
+      "test_id": "T_hybrid_9",
+      "requirement_id": "FR_hybrid_5",
+      "scenario": "Free tier user views 30-day mood history graph",
+      "steps": [
+        "Log in with a free account that has at least seven mood entries",
+        "Navigate to the mood history screen",
+        "Observe the graph displayed"
+      ],
+      "expected_result": "A graphical mood history covering up to 30 days is displayed with no subscription prompt appearing.",
+      "notes": "Pretty much the same test, just added a check that no paywall shows up for free users."
+    },
+    {
+      "test_id": "T_hybrid_10",
+      "requirement_id": "FR_hybrid_5",
+      "scenario": "User views mood history with fewer than seven entries",
+      "steps": [
+        "Log in with a free account that has fewer than seven mood entries",
+        "Navigate to the mood history screen"
+      ],
+      "expected_result": "The system displays whatever entries exist or shows an empty state message. No paywall prompt appears.",
+      "notes": "did not change"
+    },
+    {
+      "test_id": "T_hybrid_11",
+      "requirement_id": "FR_hybrid_6",
+      "scenario": "User receives insight summary after seven consecutive check-ins",
+      "steps": [
+        "Log in to the application",
+        "Complete mood check-ins for seven consecutive days",
+        "Navigate to the insights section"
+      ],
+      "expected_result": "The system displays a summary containing at least three observations about the user's mood patterns.",
+      "notes": "Changed '3-5 recommendations' to 'at least three observations' — recommendations felt too prescriptive and hard to verify."
+    },
+    {
+      "test_id": "T_hybrid_12",
+      "requirement_id": "FR_hybrid_6",
+      "scenario": "User does not receive insights before completing seven check-ins",
+      "steps": [
+        "Log in to the application",
+        "Complete mood check-ins for fewer than seven days",
+        "Navigate to the insights section"
+      ],
+      "expected_result": "The system does not display a personalized insight summary and shows a message indicating more check-ins are needed.",
+      "notes": "did not change"
+    },
+    {
+      "test_id": "T_hybrid_13",
+      "requirement_id": "FR_hybrid_7",
+      "scenario": "User selects a non-English language during onboarding",
+      "steps": [
+        "Open the app for the first time",
+        "Proceed through the onboarding screens",
+        "Locate the language selection screen",
+        "Select a non-English language",
+        "Continue through the remaining onboarding steps"
+      ],
+      "expected_result": "All UI elements, prompts, and content displayed after language selection are shown in the selected language.",
+      "notes": "Brand new test — the automated pipeline skipped language support entirely even though it was its own review group."
+    },
+    {
+      "test_id": "T_hybrid_14",
+      "requirement_id": "FR_hybrid_7",
+      "scenario": "Onboarding does not offer a language selection screen",
+      "steps": [
+        "Open the app for the first time",
+        "Proceed through all onboarding screens",
+        "Check whether a language selection screen appeared"
+      ],
+      "expected_result": "A language selection screen must appear during onboarding offering at least one non-English language. If absent the test fails.",
+      "notes": "Brand new negative case — same reason as above."
+    },
+    {
+      "test_id": "T_hybrid_15",
+      "requirement_id": "FR_hybrid_8",
+      "scenario": "Language preference persists after app is closed and reopened",
+      "steps": [
+        "Complete onboarding and select a non-English language",
+        "Close the application completely",
+        "Reopen the application"
+      ],
+      "expected_result": "The app launches in the previously selected language without prompting the user to re-select.",
+      "notes": "Brand new test — language persistence wasn't covered anywhere in the auto pipeline."
+    },
+    {
+      "test_id": "T_hybrid_16",
+      "requirement_id": "FR_hybrid_8",
+      "scenario": "App reverts to English after language was previously set",
+      "steps": [
+        "Select a non-English language during onboarding",
+        "Close and reopen the app",
+        "Observe the language displayed on launch"
+      ],
+      "expected_result": "If the app launches in English instead of the previously selected language the test fails.",
+      "notes": "Brand new negative case for language persistence."
+    },
+    {
+      "test_id": "T_hybrid_17",
+      "requirement_id": "FR_hybrid_9",
+      "scenario": "User views third-party data disclosure in privacy settings",
+      "steps": [
+        "Log in to the app",
+        "Navigate to the privacy settings section",
+        "Open the data disclosure page"
+      ],
+      "expected_result": "A list of all third-party data recipients is displayed, each with the category of data shared and a link to their privacy policy.",
+      "notes": "Auto version was about data restoration after updates which has nothing to do with privacy. Completely replaced it."
+    },
+    {
+      "test_id": "T_hybrid_18",
+      "requirement_id": "FR_hybrid_9",
+      "scenario": "Privacy disclosure page is missing or incomplete",
+      "steps": [
+        "Navigate to the privacy settings section",
+        "Open the data disclosure page",
+        "Check whether third-party recipients are listed with data categories and policy links"
+      ],
+      "expected_result": "If any third-party recipient is listed without a data category or policy link the test fails.",
+      "notes": "did not change"
+    },
+    {
+      "test_id": "T_hybrid_19",
+      "requirement_id": "FR_hybrid_10",
+      "scenario": "App prompts for PIN before displaying personal data",
+      "steps": [
+        "Enable PIN lock in the app settings",
+        "Close the app completely",
+        "Reopen the app"
+      ],
+      "expected_result": "The system prompts the user to enter their PIN before displaying any journal or mood data.",
+      "notes": "Auto version tested repetitive questions which belongs to a completely different group. Swapped it for a PIN lock test."
+    },
+    {
+      "test_id": "T_hybrid_20",
+      "requirement_id": "FR_hybrid_10",
+      "scenario": "Personal data is visible without authentication when PIN is enabled",
+      "steps": [
+        "Enable PIN lock in the app settings",
+        "Resume the app from the background without authenticating",
+        "Check whether any journal or mood data is visible"
+      ],
+      "expected_result": "If any personal data is visible before PIN authentication succeeds the test fails.",
+      "notes": "did not change"
     }
   ]
 }
