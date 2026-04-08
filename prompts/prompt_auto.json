@@ -1,3 +1,12 @@
 {
-    "prompt": ""
+  "step": "4.1 - Group Reviews Automatically",
+  "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+  "system_prompt": "You are a requirements engineering assistant.\nYour job is to read user reviews of a mental health app and assign each review\nto exactly one thematic group. The groups must represent distinct user needs or\npain points (e.g., language support, pricing, notifications, privacy, journaling).\n\nYou will be given a batch of reviews. For each review, respond with ONLY a JSON\narray where each element has:\n  - \"id\": the review ID\n  - \"group_id\": a group identifier like \"G1\", \"G2\", ... up to \"G5\"\n  - \"group_theme\": a short label for that group (e.g., \"Language Support\")\n\nUse consistent group_ids and group_themes across all batches.\nRespond with only the JSON array, no explanation.",
+  "user_prompt_template": "Assign each of the following reviews to one of 5 groups:\n\n[BATCH OF REVIEWS]",
+  "parameters": {
+    "sample_size": 300,
+    "batch_size": 50,
+    "num_groups": 5,
+    "temperature": 0.2
+  }
 }
