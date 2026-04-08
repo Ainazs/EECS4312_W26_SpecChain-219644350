@@ -2,30 +2,138 @@
   "personas": [
     {
       "id": "P_hybrid_1",
-      "name": "Frequent Fitness Logger",
-      "description": "A user who depends on the app for regular workout tracking and expects logging to work reliably during or immediately after exercise.",
+      "name": "Multilingual Mental Health Seeker",
+      "description": "A non-english speaker that wants to use the app in thier native language and share insights with a therapist who also does not speak English.",
       "derived_from_group": "H1",
       "goals": [
-        "Log workouts quickly",
-        "Track activities without interruption"
+        "Access mental health tracking features in their native language",
+        "Share app insights with a therapist who does not speak English"
       ],
       "pain_points": [
-        "The app crashes while saving workouts",
-        "Previously entered activity data may disappear"
+        "App content and UI are only available in English",
+        "No option to change the display language within the app"
       ],
       "context": [
-        "Using the app during exercise sessions",
-        "Using the app outdoors or while moving"
+        "Using the app alongside therapy sessions",
+        "People with limited English proficiency trying to navigate an English-only interface"
       ],
       "constraints": [
-        "Workout logging must complete without crashing",
-        "Saved workout data must persist"
+        "All UI elements and content must be available in at least one non-English language",
+        "Language selection must persist across sessions"
       ],
       "evidence_reviews": [
-        "rev_12",
-        "rev_41"
+        "rev_1989", "rev_749", "rev_1546", "rev_1207", "rev_2582",
+        "rev_1189", "rev_3833", "rev_4096", "rev_3120", "rev_2793"
       ],
-      "notes": "Refined the persona description and removed an unsupported assumption about synchronization."
+      "notes": "Renamed from 'Mental Health Tracker' which was too generic and not grounded in the language group. The auto persona for G1 did not mention language at all despite being derived from a language support group."
+    },
+    {
+      "id": "P_hybrid_2",
+      "name": "Budget-Conscious Wellness User",
+      "description": "A user looking for affordable mental health support without the burden of a paid subscription.",
+      "derived_from_group": "H2",
+      "goals": [
+        "Access core mental health features without paying",
+        "Understand what is free versus paid before investing time in the app"
+      ],
+      "pain_points": [
+        "Useful features and historical mood data are locked behind a paywall",
+        "No clear indication of pricing until after account setup"
+      ],
+      "context": [
+        "Downloaded the app seeking affordable mental health support",
+        "Willing to use the app long-term if the free tier provides enough value"
+      ],
+      "constraints": [
+        "Core mood tracking and insights must be accessible without a subscription",
+        "Pricing information must be visible before account creation"
+      ],
+      "evidence_reviews": [
+        "rev_4154", "rev_3338", "rev_259", "rev_3358", "rev_362",
+        "rev_4166", "rev_2557", "rev_2864", "rev_1696", "rev_698"
+      ],
+      "notes": "Kept core structure from auto persona, added missing context around pricing transparency and removed vague constraint about 'willing to use free alternatives' which is not a system constraint."
+    },
+    {
+      "id": "P_hybrid_3",
+      "name": "Daily Self-Reflection User",
+      "description": "An engaged user who relies on the app daily for mood tracking and self-reflection as part of managing their mental health.",
+      "derived_from_group": "H3",
+      "goals": [
+        "Track mood and emotions consistently every day" , 
+        "Gain meaningful insights into mental health patterns over time"
+      ],
+      "pain_points": [
+        "App does not always surface actionable insights from tracked data",
+        "Some users find check-in questions feel repetitive over time"
+      ],
+      "context": [
+        "Using the app as a personal mental health management tool",
+        "May be using the app alongside professional therapy"
+      ],
+      "constraints": [
+        "The app must provide valuable insights derived from logged mood data",
+        "Check-in experience must feel engaging and do not repeat the questions on consecutive days"
+      ],
+      "evidence_reviews": [
+        "rev_2282", "rev_998", "rev_3867", "rev_3612", "rev_738",
+        "rev_38", "rev_3551", "rev_3989", "rev_1524", "rev_587"
+      ],
+      "notes": "Renamed from 'Hopeful Helper' which was vague. Removed unsupported pain point about PTSD which was not grounded in the review group evidence. Refined goals and constraints to be more specific and requirements-oriented."
+    },
+    {
+      "id": "P_hybrid_4",
+      "name": "Frequent Check-In User frustraed",
+      "description": "A user with high frequancy of check-in, bothered by repetitive questions in excesrsises.",
+      "derived_from_group": "H4",
+      "goals": [
+        "Meaningful daily check-ins that feel varied and relevant",
+        "Export and share mental health results with healthcare providers"
+      ],
+      "pain_points": [
+        "Check-in questions repeat too frequently, reducing engagement",
+        "Emotion options are too limited to accurately capture nuanced feelings"
+      ],
+      "context": [
+        "Uses the app regularly for structured mental health check-ins",
+        "Shares app results with a GP or psychiatrist"
+      ],
+      "constraints": [
+        "Check-in questions must not repeat on consecutive days",
+        "Emotion selection must include enough options to capture a range of feelings"
+      ],
+      "evidence_reviews": [
+        "rev_1343", "rev_3083", "rev_879", "rev_3618", "rev_1195",
+        "rev_3282", "rev_170", "rev_287", "rev_1068", "rev_666"
+      ],
+      "notes": "Renamed from the ambiguous 'Hopeful Helper'. eliminated the PTSD pain point that was unsubstantiated by the review group's findings. improved objectives and limitations to be more precise and requirements-focused."
+    },
+    {
+      "id": "P_hybrid_5",
+      "name": "Privacy-Conscious Long-Term User",
+      "description": "A long-term user who stores sensitive personal data in the app and is concerned about third-party data sharing and lack of security controls.",
+      "derived_from_group": "H5",
+      "goals": [
+        "Use the app knowing their sensitive journal and mood data is not shared with third parties",
+        "Have security controls such as a PIN to protect app access"
+      ],
+      "pain_points": [
+        "App shares device identifiers with third parties without an opt-out option",
+        "No PIN or biometric lock to prevent unauthorized access to personal data"
+      ],
+      "context": [
+        "Has been using the app long-term and stores sensitive mental health information",
+        "Reads privacy policies carefully and is aware of data practices"
+      ],
+      "constraints": [
+        "User data must not be shared with third parties without explicit opt-in consent",
+        "App must provide an access control mechanism such as a PIN or biometric lock"
+      ],
+      "evidence_reviews": [
+        "rev_2838", "rev_2513", "rev_13", "rev_2670", "rev_459",
+        "rev_488", "rev_3786", "rev_893", "rev_1367", "rev_301"
+      ],
+      "notes": "changed from Disappointed User, which was too ambiguous and more concerned with update annoyance than privacy. The entire persona was rewritten to fit the hybrid group H5's predominant focus of data security and privacy. Unsupported pain points about data loss upon updates were eliminated."
     }
   ]
 }
