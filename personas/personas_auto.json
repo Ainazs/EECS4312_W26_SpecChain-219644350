@@ -2,229 +2,202 @@
   "personas": [
     {
       "id": "P_auto_1",
-      "name": "Mindful Tracker",
-      "description": "A person who uses journaling and tracking to manage their mental health and gain insights into their emotions.",
-      "derived_from_group": "G1",
+      "name": "Frugal Mental Health Enthusiast",
+      "description": "A budget-conscious individual seeking mental health support and tracking tools without incurring significant costs.",
+      "derived_from_group": "G2",
       "goals": [
-        "Track and understand my emotions and moods",
-        "Gain insights into my mental health and well-being",
-        "Improve my mental health and life"
+        "Get mental health support without spending money",
+        "Track mental health progress"
       ],
       "pain_points": [
-        "Forgetting to track my emotions and moods",
-        "Difficulty in understanding and analyzing my emotions",
-        "Limited time to spend on tracking and analyzing my mental health"
+        "Limited free features",
+        "Paywall for advanced help and insights",
+        "Cost of subscription"
       ],
       "context": [
-        "May be experiencing mental health issues such as mood swings or anxiety",
-        "May be in therapy or seeking support for mental health",
-        "Values insights and understanding of their emotions and behaviors"
+        "Interested in mental health and wellness",
+        "Seeking affordable solutions"
       ],
       "constraints": [
-        "Limited time to spend on tracking and analyzing mental health",
-        "May struggle with self-reflection and understanding of emotions"
+        "Limited financial resources",
+        "Willing to use free alternatives"
       ],
       "evidence_reviews": [
-        "rev_243",
-        "rev_1978",
-        "rev_2277",
-        "rev_66",
-        "rev_1672",
-        "rev_4225",
-        "rev_3425",
-        "rev_3827",
-        "rev_2287",
-        "rev_2249",
-        "rev_1873",
-        "rev_1306",
-        "rev_2585",
-        "rev_3836",
-        "rev_1343",
-        "rev_370",
-        "rev_4101",
-        "rev_326",
-        "rev_3570",
-        "rev_1597"
+        "rev_4154",
+        "rev_3338",
+        "rev_259",
+        "rev_3358",
+        "rev_362",
+        "rev_4166",
+        "rev_2557",
+        "rev_2864",
+        "rev_1696",
+        "rev_698",
+        "rev_281",
+        "rev_3041",
+        "rev_1742",
+        "rev_3164",
+        "rev_1545"
       ]
     },
     {
       "id": "P_auto_2",
-      "name": "Mindful Tracker",
-      "description": "A self-aware individual seeking mental wellness tools, concerned about the cost and accessibility of premium features.",
-      "derived_from_group": "G2",
+      "name": "Hopeful Helper",
+      "description": "A person seeking to improve their mental health and wellbeing through tracking and reflection.",
+      "derived_from_group": "G3",
       "goals": [
-        "Track and manage mental wellness",
-        "Understand and improve emotional state"
+        "to track and understand their mental health",
+        "to find convenient and easy-to-use tools for self-reflection"
       ],
       "pain_points": [
-        "Limited features in the free version",
-        "Cost of premium subscription plans"
+        "struggling with mental health issues such as PTSD",
+        "feeling frustrated with some aspects of the app"
       ],
       "context": [
-        "Uses mental wellness apps to track mood and emotions",
-        "Values user-friendly and insightful tools"
+        "using the app for personal mental health management",
+        "possibly in conjunction with therapy"
       ],
       "constraints": [
-        "Budget constraints when considering premium features",
-        "Seeks value for money in app subscriptions"
+        "may be experiencing emotional distress or difficulty articulating emotions"
       ],
       "evidence_reviews": [
-        "rev_2728",
-        "rev_2499",
-        "rev_387",
-        "rev_614",
-        "rev_198",
-        "rev_926",
-        "rev_886",
-        "rev_3898",
-        "rev_3486",
-        "rev_2158",
-        "rev_2395",
-        "rev_3534",
-        "rev_2421",
-        "rev_1038",
-        "rev_2897",
-        "rev_1221",
-        "rev_796",
-        "rev_1838",
-        "rev_2607",
-        "rev_4212"
+        "rev_2282",
+        "rev_998",
+        "rev_3867",
+        "rev_3612",
+        "rev_738",
+        "rev_38",
+        "rev_3551",
+        "rev_3989",
+        "rev_1524",
+        "rev_587",
+        "rev_2043",
+        "rev_1086",
+        "rev_3185",
+        "rev_3747",
+        "rev_1934"
       ]
     },
     {
       "id": "P_auto_3",
       "name": "Mental Health Tracker",
-      "description": "A person who is actively seeking to understand and manage their mental health, particularly in relation to mood tracking and depression.",
-      "derived_from_group": "G3",
+      "description": "A person seeking to manage their mental health and emotions using a mobile app.",
+      "derived_from_group": "G1",
       "goals": [
-        "to track and understand my mood",
-        "to manage my mental health",
-        "to gain insights into my emotional state"
+        "track and manage mental health",
+        "gain insights into emotions and feelings",
+        "find a user-friendly and effective mental health app"
       ],
       "pain_points": [
-        "difficulty gauging my mood",
-        "struggling with negative emotions",
-        "needing to pay for premium features"
+        "struggling with depression and anxiety",
+        "difficulty understanding and controlling emotions",
+        "need for a reliable and professional mental health app"
       ],
       "context": [
-        "has experienced depression or mood swings",
-        "is looking for a tool to help them track and manage their mental health",
-        "values self-awareness and understanding of their emotional state"
+        "using mobile apps for mental health support",
+        "experiencing mood fluctuations",
+        "seeking a simple and effective tracking solution"
       ],
       "constraints": [
-        "may have limited knowledge of mental health resources",
-        "may be hesitant to seek professional help"
+        "limited technical expertise",
+        "need for a calming and user-friendly interface"
       ],
       "evidence_reviews": [
-        "rev_1125",
-        "rev_1099",
-        "rev_1525",
-        "rev_2716",
-        "rev_2067",
-        "rev_3122",
-        "rev_1705",
-        "rev_3145",
-        "rev_2334",
-        "rev_3601",
-        "rev_4133",
-        "rev_130",
-        "rev_2999",
-        "rev_1027",
-        "rev_3543",
-        "rev_4267",
-        "rev_2947",
-        "rev_3219",
-        "rev_716",
-        "rev_4070"
+        "rev_1989",
+        "rev_749",
+        "rev_1546",
+        "rev_1207",
+        "rev_2582",
+        "rev_1189",
+        "rev_3833",
+        "rev_4096",
+        "rev_3120",
+        "rev_2793",
+        "rev_1739",
+        "rev_3834",
+        "rev_2207",
+        "rev_1593",
+        "rev_1673"
       ]
     },
     {
       "id": "P_auto_4",
-      "name": "Frustrated Technical User",
-      "description": "A user who experiences technical issues with the app and values its benefits for mental health tracking.",
+      "name": "Hopeful Tracker",
+      "description": "A mental health-conscious individual seeking to understand and manage their emotions through digital tools.",
       "derived_from_group": "G4",
       "goals": [
-        "Track mental health and mood",
-        "Get insights into emotional state"
+        "to easily track and understand their emotions and mental health",
+        "to gain insights into their mental state"
       ],
       "pain_points": [
-        "App crashes or doesn't work as expected",
-        "Data loss or difficulty importing data",
-        "Inconsistent notifications"
+        "restrictive free features",
+        "cost of premium subscriptions",
+        "limitations in accessing historical data"
       ],
       "context": [
-        "Long-time user of the app",
-        "Values the app's benefits for mental health tracking",
-        "Experiences technical issues that hinder app usage"
+        "using mental health apps to track emotions and daily tasks",
+        "seeking affordable and comprehensive mental health tools"
       ],
       "constraints": [
-        "Limited technical expertise",
-        "Frustration with recurring technical issues"
+        "limited financial resources for mental health tools",
+        "frustration with paywalled features"
       ],
       "evidence_reviews": [
-        "rev_573",
-        "rev_2119",
-        "rev_487",
-        "rev_2821",
-        "rev_480",
-        "rev_493",
-        "rev_466",
-        "rev_891",
-        "rev_471",
-        "rev_497",
-        "rev_472",
-        "rev_3478",
-        "rev_1770",
-        "rev_712",
-        "rev_2925",
-        "rev_1988",
-        "rev_448",
-        "rev_3765",
-        "rev_674",
-        "rev_1308"
+        "rev_1343",
+        "rev_3083",
+        "rev_879",
+        "rev_3618",
+        "rev_1195",
+        "rev_3282",
+        "rev_170",
+        "rev_287",
+        "rev_1068",
+        "rev_666",
+        "rev_866",
+        "rev_2553",
+        "rev_799",
+        "rev_1913",
+        "rev_1988"
       ]
     },
     {
       "id": "P_auto_5",
-      "name": "App Supporter",
-      "description": "A user who values helpful support and community in the app.",
+      "name": "Disappointed User",
+      "description": "A user who is frustrated with recent updates to the app.",
       "derived_from_group": "G5",
       "goals": [
-        "Get help and support",
-        "Find useful information"
+        "to use an app that works as expected after updates",
+        "to track their mood effectively"
       ],
       "pain_points": [
-        "Lack of community care",
-        "Cost of premium features"
+        "app not working after updates",
+        "data loss after update",
+        "frequent repetitive questions"
       ],
       "context": [
-        "Using the app for personal growth and self-improvement",
-        "Seeking support and guidance"
+        "has experienced issues with app functionality after updates",
+        "values privacy and security of personal data"
       ],
       "constraints": [
-        "Willing to pay for premium features",
-        "Values free options"
+        "limited patience for troubleshooting",
+        "concerned about data privacy"
       ],
       "evidence_reviews": [
-        "rev_1720",
-        "rev_545",
-        "rev_1328",
-        "rev_3719",
-        "rev_1486",
-        "rev_935",
-        "rev_3989",
-        "rev_3390",
-        "rev_2164",
-        "rev_3255",
-        "rev_981",
-        "rev_175",
-        "rev_1811",
-        "rev_275",
-        "rev_2790",
-        "rev_1919",
-        "rev_1483",
-        "rev_1438",
-        "rev_2423"
+        "rev_2838",
+        "rev_2513",
+        "rev_13",
+        "rev_2670",
+        "rev_459",
+        "rev_488",
+        "rev_3786",
+        "rev_893",
+        "rev_1367",
+        "rev_301",
+        "rev_429",
+        "rev_3953",
+        "rev_476",
+        "rev_2361",
+        "rev_3743"
       ]
     }
   ]
