@@ -1,33 +1,35 @@
 # EECS4312_W26_SpecChain
 
-## instructions:
-Please update to include: 
-- App name
-- Data collection method
-- Original dataset
-- Final cleaned dataset
-- Exact commands to run pipeline
+## Application
+MindDoc: Mood Tracker & Journal (Google Play Store)
 
-# example
-Application: [Calm]
+## Dataset
+- `data/reviews_raw.jsonl` contains the collected reviews.
+- `data/reviews_clean.jsonl` contains the cleaned dataset.
+- The original collected dataset contains 4,288 reviews.
+- The cleaned dataset contains 4,288 reviews.
+- Collection method: Google Play Store scraper.
+- Cleaning steps: removed duplicates, empty and short entries, punctuation,
+  special characters, and emojis. Lowercased all text, removed stop words,
+  and lemmatized all words.
 
-Dataset:
-- reviews_raw.jsonl contains the collected reviews.
-- reviews_clean.jsonl contains the cleaned dataset.
-- The cleaned dataset contains 842 reviews.
+## Repository Structure
+- `data/` contains datasets and review groups
+- `personas/` contains persona files
+- `spec/` contains specifications
+- `tests/` contains validation tests
+- `metrics/` contains all metric files
+- `prompts/` contains LLM prompts used in the automated pipeline
+- `src/` contains executable Python scripts
+- `reflection/` contains the final reflection
 
-Repository Structure:
-- data/ contains datasets and review groups
-- personas/ contains persona files
-- spec/ contains specifications
-- tests/ contains validation tests
-- metrics/ contains all metric files
-- src/ contains executable Python scripts
-- reflection/ contains the final reflection
+## How to Run
+1. `python src/00_validate_repo.py`
+2. `python src/02_clean.py`
+3. `python src/run_all.py`
+4. Open `metrics/metrics_summary.json` for comparison results
 
-How to Run:
-1. python src/00_validate_repo.py
-2. python src/02_clean.py
-3. python src/run_all.py
-4. Open metrics/metrics_summary.json for comparison results
-
+## Notes
+- Requires a Groq API key set as an environment variable before running the pipeline.
+- Windows: `$env:GROQ_API_KEY="your_key_here"`
+- Mac/Linux: `export GROQ_API_KEY="your_key_here"`
